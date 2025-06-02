@@ -1,0 +1,14 @@
+<edges>
+  <!-- Cao Thang road -->
+  <edge id="CT_S2C" from="CT_south_in" to="C" type="road1L"/>
+  <edge id="CT_C2N" from="C" to="CT_north_out" type="road1L"/>
+  <edge id="CT_N2C" from="CT_north_in" to="C" type="road1L"/>
+  <edge id="CT_C2S" from="C" to="CT_south_out" type="road1L"/>
+  
+  <!-- 3 Thang 2 Road -->
+  <edge id="3T2_W2C" from="3T2_west_in" to="C" type="road2L"/>
+  <edge id="3T2_C2E" from="C" to="3T2_east_out" type="road2L"/>
+  <edge id="3T2_E2C" from="3T2_east_in" to="C" type="road2L"/>
+  <edge id="3T2_C2W" from="C" to="3T2_west_out" type="road2L"/>
+</edges>
+

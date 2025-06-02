@@ -1,0 +1,63 @@
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+        
+        <!-- Motorbike: Honda Wave 110i -->
+        <vType id="motorbike" 
+                accel="3.5"       
+                decel="4.5"       
+                length="1.95"     
+                minGap="0.5"      
+                maxSpeed="16.67"/> 
+
+        <!-- Car: Toyota Vios -->
+        <vType id="car" 
+                accel="2.6"       
+                decel="4.5"      
+                length="4.42"    
+                minGap="2.0"     
+                maxSpeed="13.89"/> 
+
+        <!-- Bus 12m: Mercedes-Benz O500/Dongfeng -->
+        <vType id="bus" 
+                accel="1.0"       
+                decel="3.0"      
+                length="12.0"     
+                minGap="3.0"     
+            maxSpeed="11.11"/> 
+
+    <vTypeDistribution id="dist3"
+                       vTypes="motorbike car bus"
+                       probabilities="0.75 0.2 0.05"/>
+
+    <route id="CTSouth_2_CTNorth"  edges="CT_S2C CT_C2N"/>
+    <route id="CTSouth_2_3T2West"  edges="CT_S2C 3T2_C2W"/>
+    <route id="CTSouth_2_3T2East"  edges="CT_S2C 3T2_C2E"/>
+
+    <route id="CTNorth_2_CTSouth"  edges="CT_N2C CT_C2S"/>
+    <route id="CTNorth_2_3T2West"  edges="CT_N2C 3T2_C2W"/>
+    <route id="CTNorth_2_3T2East"  edges="CT_N2C 3T2_C2E"/>
+
+    <route id="3T2West_2_3T2East"  edges="3T2_W2C 3T2_C2E"/>
+    <route id="3T2West_2_CTNorth"  edges="3T2_W2C CT_C2N"/>
+    <route id="3T2West_2_CTSouth"  edges="3T2_W2C CT_C2S"/>
+
+    <route id="3T2East_2_3T2West"  edges="3T2_E2C 3T2_C2W"/>
+    <route id="3T2East_2_CTNorth"  edges="3T2_E2C CT_C2N"/>
+    <route id="3T2East_2_CTSouth"  edges="3T2_E2C CT_C2S"/>
+
+    <flow id="flow_north_left"    route="CTNorth_2_3T2West"  begin="0" end="3600" number="200" type="dist3" departLane="best" departSpeed="max"/>
+    <flow id="flow_north_straight" route="CTNorth_2_CTSouth" begin="0" end="3600" number="600" type="dist3" departLane="best" departSpeed="max"/>
+    <flow id="flow_north_right"   route="CTNorth_2_3T2East"  begin="0" end="3600" number="200" type="dist3" departLane="best" departSpeed="max"/>
+
+    <flow id="flow_south_left"    route="CTSouth_2_3T2West"  begin="0" end="3600" number="200" type="dist3" departLane="best" departSpeed="max"/>
+    <flow id="flow_south_straight" route="CTSouth_2_CTNorth" begin="0" end="3600" number="600" type="dist3" departLane="best" departSpeed="max"/>
+    <flow id="flow_south_right"   route="CTSouth_2_3T2East"  begin="0" end="3600" number="200" type="dist3" departLane="best" departSpeed="max"/>
+
+    <flow id="flow_east_left"     route="3T2East_2_CTSouth"  begin="0" end="3600" number="200" type="dist3" departLane="best" departSpeed="max"/>
+    <flow id="flow_east_straight" route="3T2East_2_3T2West"   begin="0" end="3600" number="600" type="dist3" departLane="best" departSpeed="max"/>
+    <flow id="flow_east_right"    route="3T2East_2_CTSouth"  begin="0" end="3600" number="200" type="dist3" departLane="best" departSpeed="max"/>
+
+    <flow id="flow_west_left"     route="3T2West_2_CTNorth"  begin="0" end="3600" number="200" type="dist3" departLane="best" departSpeed="max"/>
+    <flow id="flow_west_straight" route="3T2West_2_3T2East"   begin="0" end="3600" number="600" type="dist3" departLane="best" departSpeed="max"/>
+    <flow id="flow_west_right"    route="3T2West_2_CTSouth"  begin="0" end="3600" number="200" type="dist3" departLane="best" departSpeed="max"/>
+</routes>

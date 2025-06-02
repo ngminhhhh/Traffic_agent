@@ -1,0 +1,4 @@
+<types>
+  <type id="road1L" numLanes="1" speed="11.1"/>
+  <type id="road2L" numLanes="2" speed="11.1"/>
+</types>

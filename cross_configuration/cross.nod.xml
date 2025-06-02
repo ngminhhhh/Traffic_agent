@@ -1,0 +1,16 @@
+<nodes>
+  <node id="C"             x="0"    y="0"    type="traffic_light"/>
+
+  <!-- Cao Thang Road -->
+  <!-- distance between in -> out = 100 -->
+  <node id="CT_south_in"   x="0"    y="-500"  type="priority"/>
+  <node id="CT_south_out"  x="0"    y="-500"  type="priority"/>
+  <node id="CT_north_out"  x="0"    y="1000"   type="priority"/>
+  <node id="CT_north_in"   x="0"    y="1000"  type="priority"/>
+
+  <!-- 3 Thang 2 -->
+  <node id="3T2_west_in"   x="-1000" y="0"     type="priority"/>
+  <node id="3T2_west_out"  x="-1000"  y="0"     type="priority"/>
+  <node id="3T2_east_out"  x="1000"   y="0"     type="priority"/>
+  <node id="3T2_east_in"   x="1000"  y="0"     type="priority"/>
+</nodes>

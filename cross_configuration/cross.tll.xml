@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional>
+    <!-- 1. Phase 0: Green cho Nam–Bắc (G = 30s) -->
+    <phase duration="30" state="GGGgg rrrrr GGGgg rrrrr"/>
+    <!-- 2. Phase 1: Yellow cho Nam–Bắc (Y = 3s) -->
+    <phase duration="3"  state="yyyyy rrrr yyyy rrrr"/>
+    <!-- 3. Phase 2: Green cho Đông–Tây (G = 30s) -->
+    <phase duration="30" state="rrrrr GGGgg rrrrr GGGgg"/>
+    <!-- 4. Phase 3: Yellow cho Đông–Tây (Y = 3s) -->
+    <phase duration="3"  state="rrrry yyyy rrrry yyyy"/>
+  
+</additional>
