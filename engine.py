@@ -5,7 +5,7 @@ from nn_architechure import *
 sumo_binary = "sumo-gui"
 sumo_config = "./cross_configuration/cross.sumocfg"
 
-sumo_cmd = [sumo_binary, "-c", sumo_config, "--start", "--quit-on-end", "--seed", "42"]
+sumo_cmd = [sumo_binary, "-c", sumo_config, "--quit-on-end", "--seed", "42"]
 
 # * Getter function
 def get_state(edges: dict):
@@ -270,9 +270,11 @@ if __name__ == "__main__":
     Q_network.eval()
 
     print("Test - section:")
-    r = simulation_ep(num_simulates=num_simulates, q_net=Q_network, buffer=buffer, 
-            decision_interval=decision_interval, yellow_interval=yellow_interval, epsilon=0)
-    print(f"Reward = {r:.2f}")
 
     print("Static - section:")
     static_traffic(num_simulates)
+
+    print("Agent section")
+    r = simulation_ep(num_simulates=num_simulates, q_net=Q_network, buffer=buffer, 
+            decision_interval=decision_interval, yellow_interval=yellow_interval, epsilon=0)
+    print(f"Reward = {r:.2f}")
